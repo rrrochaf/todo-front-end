@@ -1,5 +1,15 @@
-<H1>Seja bem vindo!</H1>
-
+<H1>Welcome!</H1>
+<BR>
 <div class="container">
-  Bem vindo {{name | uppercase}}. Gerencie as suas tarefas <a routerLink="/todos">aqui.</a>
+  Welcome {{name | uppercase}}. You can manage your tasks <a routerLink="/todos">aqui.</a>
 </div>
+<BR><BR>
+<div class="container">
+  Click here and get a customize welcome message<button (click)="welcomeMessageWithParameter()" class="btn btn-success" >Get Welcome Message</button>
+</div>
+<BR>
+  <div class="container" *ngIf="welcomeMessageFromService">
+   <h1>Your Customized Welcome Message</h1>
+    {{welcomeMessageFromService}}
+  </div>
+  

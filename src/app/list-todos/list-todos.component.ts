@@ -32,5 +32,4 @@ export class ListTodosComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
