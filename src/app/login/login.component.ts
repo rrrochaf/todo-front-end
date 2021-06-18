@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { HardcodedAuthenticationService } from '../service/hardcoded-authentication.service';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

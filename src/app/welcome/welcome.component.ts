@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { WelcomeDataService } from '../service/data/welcome-data.service';
 
 
+
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
