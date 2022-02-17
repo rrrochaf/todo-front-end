@@ -1,0 +1,7 @@
+<BR>
+<h4>Selecione o Convenio: </h4>
+<select [ngModel]="convenioSelecionado" (ngModelChange)="onChange($event)">
+  <option *ngFor="let convenio of convenios" value= {{convenio.name}}>
+    {{convenio.name}}
+  </option>
+</select>

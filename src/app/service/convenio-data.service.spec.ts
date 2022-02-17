@@ -3,32 +3,30 @@ import {
   HttpClientTestingModule,
   HttpTestingController
 } from '@angular/common/http/testing';
-import { WelcomeDataService } from './welcome-data.service';
+import { ConvenioDataService } from './convenio-data.service';
 
-describe('WelcomeDataService', () => {
-  let service: WelcomeDataService;
+describe('ConvenioDataService', () => {
+  let service: ConvenioDataService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [WelcomeDataService]
+      providers: [ConvenioDataService]
     });
-    service = TestBed.inject(WelcomeDataService);
+    service = TestBed.inject(ConvenioDataService);
   });
 
   it('can load instance', () => {
     expect(service).toBeTruthy();
   });
 
-  describe('executeHelloWorldBeanService', () => {
+  describe('retrieveAllConvenios', () => {
     it('makes expected calls', () => {
       const httpTestingController = TestBed.inject(HttpTestingController);
-      service.executeHelloWorldBeanService().subscribe(res => {
+      service.retrieveAllConvenios().subscribe(res => {
         expect(res)
       });
-      const req = httpTestingController.expectOne(
-        'http://localhost:8080/hello-world-bean'
-      );
+      const req = httpTestingController.expectOne('HTTP_ROUTE_GOES_HERE');
       expect(req.request.method).toEqual('GET');
       req
       httpTestingController.verify();

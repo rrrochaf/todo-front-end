@@ -13,6 +13,9 @@ import { FooterComponent } from './footer/footer.component';
 import { LogoutComponent } from './logout/logout.component';
 import { HttpClientModule } from '@angular/common/http';
 import {ButtonModule} from 'primeng/button';
+import { TodoComponent } from './todo/todo.component';
+import { ConvenioComponent } from './convenio/convenio.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -25,14 +28,21 @@ import {ButtonModule} from 'primeng/button';
     ListTodosComponent,
     MenuComponent,
     FooterComponent,
-    LogoutComponent
+    LogoutComponent,
+    TodoComponent,
+    ConvenioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ButtonModule
+    ButtonModule,
+    BrowserAnimationsModule,
+    
+    
+    
+    
     
     
     
